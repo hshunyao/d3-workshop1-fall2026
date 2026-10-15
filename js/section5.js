@@ -104,3 +104,28 @@ lineData.forEach((region, i) => {
 
 // Add title and axis label 
 // Do it yourself! Hint: look back at the bar chart code for how to add text elements for the title and axis labels.
+
+// Chart title
+// Chart title
+lineSvg.append('text')
+    .attr('x', lineWidth / 2)
+    .attr('y', -10)
+    .attr('text-anchor', 'middle')
+    .style('font-size', '16px')
+    .style('font-weight', 'bold')
+    .text('Electricity Prices by Region Over Time');
+
+// X axis label
+lineSvg.append('text')
+    .attr('x', lineWidth / 2)
+    .attr('y', lineHeight + 50)
+    .attr('text-anchor', 'middle')
+    .text('Year');
+
+// Y axis label
+lineSvg.append('text')
+    .attr('transform', 'rotate(-90)')
+    .attr('x', -lineHeight / 2)
+    .attr('y', -60)
+    .attr('text-anchor', 'middle')
+    .text('Electricity Price ($/kWh)');

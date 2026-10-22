@@ -40,9 +40,9 @@ d3.select('#demo-2')
     .data(electricityPrices) // Bind the gasPrices data to the circles
     .join('rect') // Create a circle for each data point (this is where the circles are created)
     .attr('x', (d, i) => i*60+30) // Set x position based on index
-    .attr('y', d => 100 - d * 200) // Set y position (fixed for now)
+    .attr('y', d => 100 - d * 100) // Set y position (fixed for now)
     .attr('width', 30)
-    .attr('height', d => d * 200)
+    .attr('height', d => d * 100)
     .attr('fill', 'green');; 
 // Remember that circle needs radius (r) and center (cx, cy) to create it,
 // while rectangles need x, y, width, and height. You can use the electricity price to determine the height of the rectangle and set a fixed width.
